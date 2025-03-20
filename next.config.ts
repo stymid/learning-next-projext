@@ -1,7 +1,10 @@
-import type { NextConfig } from 'next';
+require("dotenv").config();
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig = {
+  env: {
+    POSTGRES_URL: process.env.POSTGRES_URL,
+    SUPABASE_URL: process.env.SUPABASE_URL,
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
